@@ -9,16 +9,7 @@ if [ $user_id -ne 0 ]; then
     exit 1
 fi
 
-mkdir -p ${logs_folder}
-
-
-echo " procceding...."
-
-dnf install nginx -y &>> $logs_file
-validate $? "Nginx Installation" 
-
-dnf install mysql -y &>> $logs_file
-validate $? "Mysql Installation"
+mkdir -p $logs_folder
 
 echo " scrript execution started  at $(date +"%F %T")" &>> $logs_file
 
