@@ -7,13 +7,13 @@ read marks
 #lt -> less than
 
 if [ $marks < 33 ]; then
-echo "Fail"
+    echo "Fail"
 elif [ $marks < 50 ]; then
-echo "Third class"
+    echo "Third class"
 elif [ $marks < 50 ]; then
-echo "Second class"
+    echo "Second class"
 elif [ $marks < 50 ]; then
-echo "First class"
+    echo "First class"
 else 
     echo "Distinction"
 fi 
