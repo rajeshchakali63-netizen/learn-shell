@@ -1,22 +1,21 @@
 #!/bin/bash
 
 user_id=$(id -u)
-logs_folder="var/log/shell-practice"
+logs_folder="/var/log/shell-practice"
 logs_file="${logs_folder}/${0}.log"
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-
 if [ $user_id -ne 0 ]; then
-    echo "Please run this script with sudo access"
+    echo "Please run this script with sudo access.."
     exit 1
 fi
 
 mkdir -p $logs_folder
 
-echo " scrript execution started  at $(date +"%F %T")" &>> $logs_file
+echo "Script started execution at $(date +"%F %T")" &>> $logs_file
 
 validate(){
     if [ $1 -ne 0 ]; then
@@ -38,4 +37,3 @@ do
         echo -e "${package} already installed...${Y}SKIPPING${N}"
     fi
 done
-
