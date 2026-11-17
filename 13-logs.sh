@@ -28,4 +28,4 @@ validate $? "Nginx Installation"
 dnf install mysql -y &>> $logs_file
 validate $? "Mysql Installation"
 
-echo " scrript execution completed at $(date +"%Y-%m-%d")"
+echo " scrript execution completed at $(date +"%Y-%m-%d")" &>> $logs_file
