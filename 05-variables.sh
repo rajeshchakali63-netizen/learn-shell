@@ -3,7 +3,7 @@
     START_TIME=$(date +%)
 
     sleep 5
-    End=$(date =%)
+    End=$(date +%)
 
 
     TOTAL_TIME=$((END - START_TIME))
