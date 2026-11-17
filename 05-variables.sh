@@ -1,11 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 
-    START_TIME=$(date +%)
+START=$(date +%s)
+# Place commands to measure here
+sleep 2
+END=$(date +%s)
 
-    sleep 5
-    End=$(date +%)
-
-
-    TOTAL_TIME=$((END - START_TIME))
-
-    echo "total execution time is: $TOTAL_TIME Seconds"
+ELAPSED=$((END - START))
+echo "Elapsed time: $ELAPSED seconds"
