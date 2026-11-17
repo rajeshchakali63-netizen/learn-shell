@@ -20,7 +20,7 @@ validate $? "Nginx Installation"
 dnf install mysql -y &>> $logs_file
 validate $? "Mysql Installation"
 
-echo " scrript execution completed at $(date +"%F %T")" &>> $logs_file
+echo " scrript execution started  at $(date +"%F %T")" &>> $logs_file
 
 validate(){
     if [ $1 -ne 0 ]; then
