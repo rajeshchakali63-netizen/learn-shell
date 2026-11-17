@@ -36,4 +36,5 @@ do
     echo "Going to install: ${package}"
     dnf install $package -y &>> $logs_file
     validate $? "Installing ${package}"
+done
 
